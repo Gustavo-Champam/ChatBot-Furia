@@ -1,14 +1,14 @@
-/* Página CS */
 .CS-page {
   padding: 20px;
   background-color: #121212;
-  color: white;
+  color: #fff;
   text-align: center;
+  min-height: 100vh;
 }
 
 .CS-page h2 {
   font-size: 2.5em;
-  color: #00ccff; /* Azul vibrante para diferenciar do R6 */
+  color: #00ccff;
   font-family: 'Orbitron', sans-serif;
   text-transform: uppercase;
   margin-bottom: 30px;
@@ -23,27 +23,28 @@
   margin-bottom: 30px;
 }
 
-/* Card */
+/* Card dos jogadores */
 .card {
-  background-color: #333;
+  background-color: #2a2a2a;
   padding: 20px;
   width: 240px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+  background-color: #333;
 }
 
-/* Contêiner da imagem (centralização e correção de corte) */
+/* Imagem do jogador */
 .player-image-container {
-  height: 250px; /* Ajustando a altura para um valor fixo mais apropriado */
+  height: 250px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -53,15 +54,14 @@
   overflow: hidden;
 }
 
-/* Imagem do jogador */
 .player-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Usando 'cover' para melhor preenchimento, cortando se necessário */
+  object-fit: cover;
   display: block;
 }
 
-/* Informações do jogador */
+/* Info dos jogadores */
 .player-info {
   margin-top: 15px;
 }
@@ -87,13 +87,14 @@ h3 {
 /* Responsividade */
 @media (max-width: 768px) {
   .card {
-    width: 100%;
+    width: 90%;
     max-width: 300px;
   }
 
   .top-row, .bottom-row {
     flex-direction: column;
     align-items: center;
+    gap: 25px;
   }
 
   .CS-page h2 {
@@ -101,10 +102,14 @@ h3 {
   }
 
   h3 {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 
   .number, .role {
     font-size: 1em;
+  }
+
+  .player-image-container {
+    height: 220px;
   }
 }

@@ -1,62 +1,43 @@
 /* Estilo global da aplicação */
 body {
-  margin: 0; /* Remove a margem padrão */
-  font-family: 'Orbitron', sans-serif; /* Fonte futurista para o tema Rainbow Six */
-  background-color: #111; /* Cor de fundo escura */
-  color: #fff; /* Cor do texto branca para bom contraste */
-  -webkit-font-smoothing: antialiased; /* Suavização de fontes no WebKit */
-  -moz-osx-font-smoothing: grayscale; /* Suavização de fontes no Firefox */
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #111; /* Fundo escuro */
+  color: #fff; /* Texto claro */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Estilo de fontes e tamanho para o código */
-code {
-  font-family: 'source-code-pro', Menlo, Monaco, Consolas, 'Courier New', monospace;
+/* Remover borda azul em campos de texto e botões */
+input, button, textarea {
+  font-family: 'Orbitron', sans-serif;
+  outline: none;
 }
 
-/* Estilo para a aplicação */
+/* Container geral da aplicação */
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 20vmin; /* Ajuste o tamanho do logo */
-  pointer-events: none; /* Impede interações com o logo */
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear; /* Animação de rotação */
-  }
-}
-
-/* Estilo do cabeçalho */
-.App-header {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin); /* Ajuste responsivo do tamanho da fonte */
-  color: #fff; /* Cor do texto no cabeçalho */
+  min-height: 100vh;
+  background-color: #121212;
 }
 
 /* Estilo dos links */
-.App-link {
-  color: #ff3d00; /* Cor vibrante associada ao tema */
-  font-size: 20px;
+a {
+  color: #ffcc00;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.App-link:hover {
-  color: #fff; /* Cor branca ao passar o mouse */
+a:hover {
+  color: #e6b800;
 }
 
-/* Animação de rotação do logo */
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(1800deg); /* A rotação do logo será mais rápida */
+/* Responsividade básica */
+@media (max-width: 768px) {
+  body {
+    font-size: 90%;
   }
 }

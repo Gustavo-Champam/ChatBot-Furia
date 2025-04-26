@@ -1,17 +1,18 @@
 .chat-container {
   max-width: 600px;
+  width: 90%;
   margin: 50px auto;
   background-color: #121212;
   color: #fff;
-  padding: 30px;
+  padding: 30px 20px;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
   font-family: 'Orbitron', sans-serif;
-  transition: transform 0.2s ease;  /* Animação suave ao passar o mouse */
+  transition: transform 0.3s ease;
 }
 
 .chat-container:hover {
-  transform: scale(1.02);  /* Aumenta ligeiramente o tamanho do chat */
+  transform: scale(1.02);
 }
 
 .chat-window {
@@ -26,19 +27,21 @@
 }
 
 .chat-window:hover {
-  background-color: #333;  /* Cor do fundo muda ao passar o mouse */
+  background-color: #2a2a2a;
 }
 
 .message {
   margin-bottom: 15px;
   font-size: 1.1em;
+  text-align: left;
 }
 
 .input-area {
   display: flex;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 input[type="text"] {
@@ -48,24 +51,24 @@ input[type="text"] {
   border-radius: 8px;
   border: none;
   background-color: #222;
-  color: #fff;
+  color: white;
   transition: all 0.3s ease;
 }
 
 input[type="text"]:focus {
+  outline: none;
   box-shadow: 0 0 5px #ffcc00;
-  border-color: #ffcc00;
 }
 
 button {
   padding: 12px 25px;
   background-color: #ffcc00;
   color: black;
+  font-weight: bold;
   border: none;
   border-radius: 8px;
-  font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 button:hover {
@@ -78,7 +81,7 @@ button:active {
 }
 
 .response-box {
-  margin-top: 25px;
+  margin-top: 20px;
   background-color: #1e1e1e;
   padding: 20px;
   border-radius: 10px;
@@ -95,25 +98,31 @@ button:active {
   margin: 0;
   font-size: 1.1em;
   line-height: 1.5;
-  color: #f0f0f0;
 }
 
-/* Responsividade para telas menores */
+/* Responsividade */
 @media (max-width: 768px) {
   .chat-container {
-    padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
+    padding: 20px 15px;
+  }
+
+  .chat-window {
+    height: 250px;
   }
 
   .input-area {
     flex-direction: column;
+    gap: 15px;
   }
 
   input[type="text"] {
+    width: 100%;
     font-size: 1em;
   }
 
   button {
+    width: 100%;
     padding: 10px 20px;
     font-size: 1em;
   }

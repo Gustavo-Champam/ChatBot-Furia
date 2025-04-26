@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;  /* Reduzimos o padding */
+  padding: 10px 30px;
   background-color: #121212;
   color: white;
   position: sticky;
@@ -13,62 +13,69 @@
 }
 
 .navbar-logo img {
-  width: 130px; /* Ajuste para a logo ficar menor */
+  width: 120px;
   height: auto;
   object-fit: contain;
-  transition: transform 0.3s ease; /* Transição para efeito ao passar o mouse */
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .navbar-logo img:hover {
-  transform: scale(1.1);  /* Aumenta um pouco a logo ao passar o mouse */
+  transform: scale(1.08);
 }
 
 .navbar-links {
   display: flex;
-  list-style-type: none;
-  gap: 25px;  /* Aumentamos um pouco o espaçamento entre os links */
-  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
   margin: 0;
+  align-items: center;
 }
 
 .navbar-links li {
-  position: relative;
+  display: inline;
 }
 
 .navbar-links a {
   color: white;
   text-decoration: none;
-  font-size: 1.1em;  /* Reduzimos um pouco o tamanho da fonte */
-  padding: 8px 12px;  /* Ajuste no padding */
-  font-weight: bold;
+  font-size: 1.1em;
+  padding: 8px 16px;
+  font-weight: 600;
   text-transform: uppercase;
+  border-radius: 6px;
   transition: all 0.3s ease;
-  border-radius: 5px;
 }
 
 .navbar-links a:hover {
   background-color: #333;
+  color: #ffcc00;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px;
   }
 
   .navbar-logo img {
-    width: 120px;
+    width: 100px;
+    margin-bottom: 10px;
   }
 
   .navbar-links {
     flex-direction: column;
-    align-items: center;
     gap: 15px;
     width: 100%;
+    text-align: center;
   }
 
-  .navbar-links li {
-    margin: 5px 0;
+  .navbar-links a {
+    font-size: 1em;
+    padding: 10px 20px;
+    width: 100%;
   }
 }
