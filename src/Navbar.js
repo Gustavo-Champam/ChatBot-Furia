@@ -7,12 +7,17 @@ function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlNavbar = () => {
-    if (window.scrollY > lastScrollY) {
-      setShowNavbar(false); // Scroll pra baixo => esconde
-    } else {
-      setShowNavbar(true);  // Scroll pra cima => mostra
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      // Scroll para baixo E passou 80px => esconde navbar
+      setShowNavbar(false);
+    } else if (currentScrollY < lastScrollY) {
+      // Scroll para cima => mostra navbar
+      setShowNavbar(true);
     }
-    setLastScrollY(window.scrollY);
+
+    setLastScrollY(currentScrollY);
   };
 
   useEffect(() => {
@@ -26,7 +31,7 @@ function Navbar() {
     <nav className={`navbar ${showNavbar ? '' : 'navbar-hidden'}`}>
       <div className="navbar-logo">
         <Link to="/">
-          <img src="/Imagens/logofuria.jpg" alt="FURIA Logo" />
+          <img src="/Imagens/logo-furia.png" alt="FURIA Logo" />
         </Link>
       </div>
       <ul className="navbar-links">
