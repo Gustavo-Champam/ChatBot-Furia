@@ -23,7 +23,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
-        <img src="/Imagens/logo.jpg" alt="FURIA Logo" />
+        <img src="/Imagens/Logo.jpg" alt="FURIA Logo" />
       </div>
       <ul className="navbar-links">
         <li><a href="/">Início</a></li>         {/* <- Link para página inicial */}
