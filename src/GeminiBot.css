@@ -1,0 +1,74 @@
+.gemini-bot {
+  background-color: #121212;
+  color: #f9f9f9;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px #ffcc00;
+  font-family: 'Orbitron', sans-serif;
+  transition: transform 0.2s ease;
+}
+
+.gemini-bot:hover {
+  transform: scale(1.02);
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #1e1e1e;
+  color: white;
+  resize: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  border-color: #ffcc00;
+  box-shadow: 0 0 5px #ffcc00;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #ffcc00;
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  font-size: 1.1em;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px 2px #ffcc00;
+}
+
+button:active {
+  transform: scale(1);
+}
+
+.response-box {
+  margin-top: 20px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #ffcc00;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+
+.response-box.show {
+  opacity: 1;
+}
+
+.response-box p {
+  margin: 0;
+  font-size: 1.1em;
+  line-height: 1.5;
+}

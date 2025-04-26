@@ -1,38 +1,180 @@
+/* Estilo Geral */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;  /* Fundo Preto Moderno */
+  color: #fff;             /* Texto Branco */
+  padding: 20px;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fbr.freepik.com%2Ffotos-vetores-gratis%2Ffundo-preto&psig=AOvVaw17p8zSZBxeW2Fdil01_YK0&ust=1745630428303000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJCR_66C8owDFQAAAAAdAAAAABAE'); /* Imagem mais suave de fundo */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Efeito de parallax */
 }
 
-.App-link {
-  color: #61dafb;
+/* Logo da Fúria */
+.App-logo {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  position: absolute;
+  top: 20px;  /* Ajuste a altura do logo */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Cabeçalho */
+.App-header {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.7);  /* Fundo escuro com transparência */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Sombra mais suave */
+  width: 100%;
+  margin-top: 100px;
+  backdrop-filter: blur(10px);  /* Desfoque de fundo */
+  -webkit-backdrop-filter: blur(10px);  /* Adicionando compatibilidade com Safari */
+}
+
+h1 {
+  font-family: 'Orbitron', sans-serif;  /* Fonte futurista */
+  color: #ffcc00;   /* Destaque em amarelo */
+  font-size: 3.5em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra suave para texto */
+}
+
+/* Botões do Menu */
+.home-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.home-button {
+  background-color: #ffcc00; /* Cor da FURIA */
+  color: black;
+  padding: 12px 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.home-button:hover {
+  background-color: #e6a900; /* Cor mais suave no hover */
+  transform: translateY(-5px);  /* Efeito de "levitação" */
+}
+
+/* Página Inicial */
+.home {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.home-button {
+  background-color: #ffcc00; /* Cor FURIA */
+  color: black;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Estilos para as Páginas dos Times */
+.R6-page, .CS-page {
+  text-align: center;
+  margin-top: 40px;
+  color: #fff;
+}
+
+.player-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Cards de Jogadores */
+.card {
+  background-color: #222222; /* Fundo do card */
+  padding: 20px;
+  border-radius: 15px;
+  width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Sombra mais intensa */
+  background-color: #333333; /* Muda a cor do card no hover */
+}
+
+.player-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Sombra na imagem */
+}
+
+h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #ffcc00;   /* Destaque em amarelo */
+  margin-top: 10px;
+  font-size: 1.4em;
+}
+
+span {
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .player-cards {
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .home-button {
+    font-size: 1.2em;
+    padding: 12px 20px;
   }
 }

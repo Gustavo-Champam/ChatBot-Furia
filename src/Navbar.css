@@ -1,0 +1,74 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;  /* Reduzimos o padding */
+  background-color: #121212;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.navbar-logo img {
+  width: 130px; /* Ajuste para a logo ficar menor */
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease; /* Transição para efeito ao passar o mouse */
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.1);  /* Aumenta um pouco a logo ao passar o mouse */
+}
+
+.navbar-links {
+  display: flex;
+  list-style-type: none;
+  gap: 25px;  /* Aumentamos um pouco o espaçamento entre os links */
+  justify-content: center;
+  margin: 0;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;  /* Reduzimos um pouco o tamanho da fonte */
+  padding: 8px 12px;  /* Ajuste no padding */
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar-links a:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .navbar-logo img {
+    width: 120px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .navbar-links li {
+    margin: 5px 0;
+  }
+}
