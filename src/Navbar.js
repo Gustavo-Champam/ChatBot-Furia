@@ -1,37 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import './Navbar.css';  // Arquivo de estilo CSS
+import { Link } from 'react-router-dom';
+import './Navbar.css';
 
-const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+function Navbar() {
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Fecha o menu ao clicar fora
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (!event.target.closest('.navbar')) {
-        setMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, []);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) {
+      setShowNavbar(false); // Scroll pra baixo => esconde
+    } else {
+      setShowNavbar(true);  // Scroll pra cima => mostra
+    }
+    setLastScrollY(window.scrollY);
   };
 
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar);
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${showNavbar ? '' : 'navbar-hidden'}`}>
       <div className="navbar-logo">
-        <img src="/Imagens/logo.jpg" alt="FURIA Logo" />
+        <Link to="/">
+          <img src="/Imagens/logo-furia.png" alt="FURIA Logo" />
+        </Link>
       </div>
       <ul className="navbar-links">
-        <li><a href="/">Início</a></li>         {/* <- Link para página inicial */}
-        <li><a href="/cs">CS:GO</a></li>
-        <li><a href="/r6">Rainbow Six</a></li>
+        <li><Link to="/cs">CS:GO</Link></li>
+        <li><Link to="/r6">Rainbow Six</Link></li>
       </ul>
     </nav>
   );
-};
+}
 
 export default Navbar;
