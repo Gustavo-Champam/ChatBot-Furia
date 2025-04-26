@@ -10,7 +10,7 @@ function CSPage() {
         {/* Jogadores */}
         <div className="card">
           <div className="player-image-container">
-            <img src="/Imagens/KSCERATO.jpg" alt="KSCERATO" className="player-image" />
+            <img src="/Imagens/kscerato.jpg" alt="KSCERATO" className="player-image" />
           </div>
           <div className="player-info">
             <h3>KSCERATO</h3>
@@ -43,7 +43,7 @@ function CSPage() {
 
         <div className="card">
           <div className="player-image-container">
-            <img src="/Imagens/fallen.jpg" alt="FalleN" className="player-image" />
+            <img src="/Imagens/Fallen.jpg" alt="FalleN" className="player-image" />
           </div>
           <div className="player-info">
             <h3>FALLEN</h3>
