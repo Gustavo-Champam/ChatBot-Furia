@@ -26,7 +26,7 @@ function Navbar() {
     <nav className={`navbar ${showNavbar ? '' : 'navbar-hidden'}`}>
       <div className="navbar-logo">
         <Link to="/">
-          <img src="/Imagens/logo-furia.png" alt="FURIA Logo" />
+          <img src="/Imagens/logofuria.jpg" alt="FURIA Logo" />
         </Link>
       </div>
       <ul className="navbar-links">
